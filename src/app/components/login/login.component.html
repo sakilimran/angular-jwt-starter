@@ -1,0 +1,20 @@
+<h3><i>Login: </i></h3>
+
+<p *ngIf="error">{{error}}</p>
+<form [formGroup]="loginForm">
+  <div class="form-group">
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="center-block">Password:
+      <input class="form-control" formControlName="password">
+    </label>
+  </div>
+  <div class="form-group">
+      <input type="submit" value="login" *ngIf="loginForm.valid" (click)="login()">
+  </div>
+
+</form>
+
